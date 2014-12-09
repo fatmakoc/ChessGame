@@ -40,7 +40,7 @@ public class At extends Tas {
 		}
 		
 		
-		System.out.println();	//tahta.yazdir(); System.out.println();
+		System.out.println();	
 		
 	}
 

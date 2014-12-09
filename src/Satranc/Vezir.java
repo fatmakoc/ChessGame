@@ -220,7 +220,7 @@ public class Vezir extends Tas {
 	     	                }
 				 }
 			     
-			     System.out.println();	 //tahta.yazdir(); System.out.println();	
+			     System.out.println();	 
 			
 		}
 	
@@ -430,7 +430,7 @@ public class Vezir extends Tas {
 	     	                }
 				 }
 			     
-			     System.out.println();   //tahta.yazdir(); System.out.println();	
+			     System.out.println();   
 			
 		}
 			
