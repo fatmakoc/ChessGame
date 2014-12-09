@@ -2,19 +2,36 @@ package Satranc;
 
 public class Tahta {
 
-	public char tahta[][]=new char[9][9];
+	public char tahta[][]=new char[8][8];
 	
 	
 	public Tahta(){
 		
-		tahta[1][1]='K'; tahta[1][2]='A'; tahta[1][3]='F'; tahta[1][4]='V'; tahta[1][5]='Ş'; tahta[1][6]='F'; tahta[1][7]='A'; tahta[1][8]='K';
-		tahta[2][1]='P'; tahta[2][2]='P'; tahta[2][3]='P'; tahta[2][4]='P'; tahta[2][5]='P'; tahta[2][6]='P'; tahta[2][7]='P'; tahta[2][8]='P';		
+		tahta[0][0]='K'; tahta[0][1]='A'; tahta[0][2]='F'; tahta[0][3]='V'; tahta[0][4]='Ş'; tahta[0][5]='F'; tahta[0][6]='A'; tahta[0][7]='K';
+		tahta[1][0]='P'; tahta[1][1]='P'; tahta[1][2]='P'; tahta[1][3]='P'; tahta[1][4]='P'; tahta[1][5]='P'; tahta[1][6]='P'; tahta[1][7]='P';		
 		
 		//for WhitePlayer
 
-		tahta[8][1]='k'; tahta[8][2]='a'; tahta[8][3]='f'; tahta[8][4]='v'; tahta[8][5]='ş'; tahta[8][6]='f'; tahta[8][7]='a'; tahta[8][8]='k';
-		tahta[7][1]='p'; tahta[7][2]='p'; tahta[7][3]='p'; tahta[7][4]='p'; tahta[7][5]='p'; tahta[7][6]='p'; tahta[7][7]='p'; tahta[7][8]='p';		
+		tahta[7][0]='k'; tahta[7][1]='a'; tahta[7][2]='f'; tahta[7][3]='v'; tahta[7][4]='ş'; tahta[7][5]='f'; tahta[7][6]='a'; tahta[7][7]='k';
+		tahta[6][0]='p'; tahta[6][1]='p'; tahta[6][2]='p'; tahta[6][3]='p'; tahta[6][4]='p'; tahta[6][5]='p'; tahta[6][6]='p'; tahta[6][7]='p';		
 		
+	}
+	
+	public void yazdir(){
+		
+		for(int k=0; k<8; k++)
+    		System.out.print("\t"+k);
+    	
+    	System.out.println();
+    	for(int i=0; i<8; i++)
+    	{
+    		System.out.print(i + "\t");
+    		for(int j=0; j<8; j++)
+    		{
+    			System.out.print(tahta[i][j]+"\t");
+    		}
+    		System.out.println();
+    	}
 	}
 	
 }
