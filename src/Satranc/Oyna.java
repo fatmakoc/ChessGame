@@ -21,7 +21,7 @@ public class Oyna {
 			if(hata2!=true)  
 			{
 
-		    tahta.yazdir();
+		    tahta.yazdir(); System.out.println();
 			System.out.println("Beyaz taþlý oyuncumuz sýra sizin,oynatmak istediðiniz taþýn X koordinatý?");
 	    	koordinat.setbasX(new Scanner(System.in).nextByte());
 	    	System.out.println("Y koordinatý lütfen ?"); koordinat.setbasY(new Scanner(System.in).nextByte());
@@ -29,7 +29,7 @@ public class Oyna {
 	    	System.out.println("Götürmek istediðiniz y koordinatý ?"); koordinat.setsonY(new Scanner(System.in).nextByte());
 			
 	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0') 
-	    		{ hata1=true;  System.out.println("Hatalý koordinat seçimi"); }
+	    		{ hata1=true;  System.out.println("Hatalý koordinat seçimi"); System.out.println(); }
 	    	
 	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
 	    	  {
@@ -45,7 +45,7 @@ public class Oyna {
 	    	if(hata1!=true)
 	    	{
 
-				tahta.yazdir();
+				tahta.yazdir(); System.out.println();
 	    		System.out.println("Siyah taþlý oyuncumuz sýra sizin,oynatmak istediðiniz taþýn X koordinatý?");
 		    	koordinat.setbasX(new Scanner(System.in).nextByte());
 		    	System.out.println("Y koordinatý lütfen ?"); koordinat.setbasY(new Scanner(System.in).nextByte());
@@ -53,7 +53,7 @@ public class Oyna {
 		    	System.out.println("Götürmek istediðiniz y koordinatý ?"); koordinat.setsonY(new Scanner(System.in).nextByte());
 	    	  	
 	    		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0')
-	    		     { hata2=true;   System.out.println("Hatalý koordinat"); }
+	    		     { hata2=true;   System.out.println("Hatalý koordinat"); System.out.println();}
 	    		
 	    		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
 		    	  {
