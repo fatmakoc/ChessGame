@@ -34,4 +34,12 @@ public class Tahta {
     	}
 	}
 	
+	
+	
+	public void yerlestir(Tas tas, Koordinat koordinat, Tahta tahta)
+	{
+		tas.hamleYap(koordinat,tahta);
+	}
+	
+
 }
