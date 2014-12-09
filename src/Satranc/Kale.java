@@ -95,7 +95,7 @@ public class Kale extends Tas{
 					
 				       }
 				}
-			 tahta.yazdir(); System.out.println(); 	
+				System.out.println();	//tahta.yazdir(); System.out.println(); 	
 		}
 		
 		         
@@ -188,7 +188,7 @@ public class Kale extends Tas{
 						
 					       }
 					}
-				  tahta.yazdir();  System.out.println();	
+					System.out.println();	 //tahta.yazdir();  System.out.println();	
 			}
 		 
 		  

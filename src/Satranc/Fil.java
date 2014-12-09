@@ -102,7 +102,7 @@ public class Fil extends Tas{
 		}
 	}
 	
-		tahta.yazdir(); System.out.println();
+		System.out.println();	 //tahta.yazdir(); System.out.println();
 		
 		      //Siyah fil için
 		
@@ -198,7 +198,7 @@ public class Fil extends Tas{
 	
 		}
 		
-		tahta.yazdir();  System.out.println();
+		System.out.println();	//tahta.yazdir();  System.out.println();
 		
 		
 	}

@@ -16,7 +16,7 @@ public class Vezir extends Tas {
 			  
 			if(koordinat.getsonY() < koordinat.getbasY() && koordinat.getbasX() < koordinat.getsonX()) //burda sað yukarý çapraz gittiðini anlýyor.
 			{
-			     while(tahta.tahta[a-1][b+1]==' ' || Character.isLowerCase(tahta.tahta[a-1][b+1])!=true || (koordinat.getsonX()==b+1 && koordinat.getsonY()==a-1) ) //burda da gitmek istediði yere kadar kontrol ediyor çünkü taþlarýn üstünden atlayamaz
+			     while(tahta.tahta[a-1][b+1]==' ' || Character.isLowerCase(tahta.tahta[a-1][b+1])!=true ) 
 		              {
 		        	      if(koordinat.getsonX()==b+1 && koordinat.getsonY()==a-1 && Character.isLowerCase(tahta.tahta[a-1][b])==false)
 		        	            {
@@ -25,6 +25,13 @@ public class Vezir extends Tas {
 		        		            girdi=true;
 		        		            break;
 		        	            }
+		        	      else if(Character.isLowerCase(tahta.tahta[a-1][b+1])==true || Character.isUpperCase(tahta.tahta[a-1][b+1])==true)
+		        	      {
+		        	    	  break;
+		        	      }
+		        	      
+		        	    	  
+		        	      
 		        	
 		        	    a=a-1; 	b=b+1;	        	 
    		              }
@@ -38,7 +45,7 @@ public class Vezir extends Tas {
 		     
 		     if(girdi!=true && koordinat.getsonY() < koordinat.getbasY() && koordinat.getbasX() > koordinat.getsonX())
 			 {
-		         while(tahta.tahta[a-1][b-1]==' ' || Character.isLowerCase(tahta.tahta[a-1][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a-1))
+		         while(tahta.tahta[a-1][b-1]==' ' || Character.isLowerCase(tahta.tahta[a-1][b-1])!=true )
 		              {
 		        	   
 		        	      if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a-1 && Character.isLowerCase(tahta.tahta[a-1][b+1])==false)
@@ -49,6 +56,12 @@ public class Vezir extends Tas {
 		        		            break;
 		                   	   }
 		        	 
+		        	      else if(Character.isLowerCase(tahta.tahta[a-1][b-1])==true || Character.isUpperCase(tahta.tahta[a-1][b-1])==true)
+		        	      {
+		        	    	  break;
+		        	      }
+		        	      
+		        	      	        	      
 		        	 a=a-1;  b=b-1;     	 
 		        	 
 		              }
@@ -61,7 +74,7 @@ public class Vezir extends Tas {
 		        
 		        if(girdi!=true && koordinat.getsonY() > koordinat.getbasY() && koordinat.getbasX() > koordinat.getsonX())
 				{  		         
-		             while(girdi!=true && (tahta.tahta[a+1][b-1]==' ' || Character.isLowerCase(tahta.tahta[a+1][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a+1)))
+		             while(girdi!=true && (tahta.tahta[a+1][b-1]==' ' || Character.isLowerCase(tahta.tahta[a+1][b-1])!=true ))
 		                  {
 		        	          if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a+1 && Character.isLowerCase(tahta.tahta[a+1][b-1])==false)
 		        	                {
@@ -70,7 +83,12 @@ public class Vezir extends Tas {
 		        		                 girdi=true;
 		        	                  	 break;
 		        	                }
-		        	 a=a+1;  b=b-1;
+		        	          else if(Character.isLowerCase(tahta.tahta[a+1][b-1])==true || Character.isUpperCase(tahta.tahta[a+1][b-1])==true)
+			        	      {
+			        	    	  break;
+			        	      }
+			        	      
+		        	          a=a+1;  b=b-1;
 		        	 
 		                  }
 				}
@@ -82,7 +100,7 @@ public class Vezir extends Tas {
 		        
 		       if(girdi!=true && koordinat.getsonY() > koordinat.getbasY() && koordinat.getbasX() < koordinat.getsonX())
 			   {
-		             while(girdi!=true && (tahta.tahta[a+1][b+1]==' ' || Character.isLowerCase(tahta.tahta[a+1][b+1])!=true || (koordinat.getsonX()==b+1 && koordinat.getsonY()==a+1)))
+		             while(girdi!=true && (tahta.tahta[a+1][b+1]==' ' || Character.isLowerCase(tahta.tahta[a+1][b+1])!=true ))
 		                  {
 		        	 
 		                    	 if(koordinat.getsonX()==b+1 && koordinat.getsonY()==a+1 && Character.isLowerCase(tahta.tahta[a+1][b+1])==false) 
@@ -92,6 +110,11 @@ public class Vezir extends Tas {
 	        		                      girdi=true;
 	        		                      break;
 		        	                  }
+		                    	 else if(Character.isLowerCase(tahta.tahta[a+1][b+1])==true || Character.isUpperCase(tahta.tahta[a+1][b+1])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	     a=a+1; b=b+1;
 		                  }
 			   }
@@ -103,7 +126,7 @@ public class Vezir extends Tas {
 		         
 			     if( girdi!=true && koordinat.getsonY() < koordinat.getbasY() && koordinat.getbasX()==koordinat.getsonX())
 				 {
-		               while(girdi!=true &&  (tahta.tahta[a-1][b]==' ' ||  Character.isLowerCase(tahta.tahta[a-1][b])!=true || (koordinat.getsonX()==b && koordinat.getsonY()==a-1 )))
+		               while(girdi!=true &&  (tahta.tahta[a-1][b]==' ' ||  Character.isLowerCase(tahta.tahta[a-1][b])!=true ))
 		                     {
 		        	              if(koordinat.getsonX()==b && koordinat.getsonY()==a-1 && Character.isLowerCase(tahta.tahta[a-1][b-1])==false)
 		        	                    {
@@ -112,6 +135,11 @@ public class Vezir extends Tas {
 		        		                    girdi=true;
 		        		                    break; 
 		        	                    } 
+		        	              else if(Character.isLowerCase(tahta.tahta[a-1][b])==true || Character.isUpperCase(tahta.tahta[a-1][b])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	             a=a-1; 
 		                     }
 				 }
@@ -123,7 +151,7 @@ public class Vezir extends Tas {
 			     
 			     if(girdi!=true && koordinat.getsonY() > koordinat.getbasY() && koordinat.getbasX()==koordinat.getsonX())
 				 {
-			            while(girdi!=true &&  (tahta.tahta[a+1][b]==' ' || Character.isLowerCase(tahta.tahta[a+1][b])!=true || (koordinat.getsonX()==b && koordinat.getsonY()==a+1 )))
+			            while(girdi!=true &&  (tahta.tahta[a+1][b]==' ' || Character.isLowerCase(tahta.tahta[a+1][b])!=true ))
 		                      {
 		        	             if(koordinat.getsonX()==b && koordinat.getsonY()==a+1 && Character.isLowerCase(tahta.tahta[a+1][b])==false)
 		        	                  {
@@ -132,6 +160,12 @@ public class Vezir extends Tas {
 		        		                  girdi=true;
 		        		                  break;
 		        	                   } 
+		        	             
+		        	             else if(Character.isLowerCase(tahta.tahta[a+1][b])==true || Character.isUpperCase(tahta.tahta[a+1][b])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	            a=a+1; 
 		                    }
 				 }
@@ -143,7 +177,7 @@ public class Vezir extends Tas {
 			     
 			     if(girdi!=true && koordinat.getsonY()==koordinat.getbasY() && koordinat.getbasX() > koordinat.getsonX())
 				 {
-			           while(girdi!=true &&  (tahta.tahta[a][b-1]==' ' || Character.isLowerCase(tahta.tahta[a][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a )))
+			           while(girdi!=true &&  (tahta.tahta[a][b-1]==' ' || Character.isLowerCase(tahta.tahta[a][b-1])!=true ))
 		                      {
 		        	             if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a && Character.isLowerCase(tahta.tahta[a][b-1])==false)
 		        	                  {
@@ -152,6 +186,11 @@ public class Vezir extends Tas {
 		        		                  girdi=true;
 		        		                  break;
 		        	                   }
+		        	             else if(Character.isLowerCase(tahta.tahta[a][b-1])==true || Character.isUpperCase(tahta.tahta[a][b-1])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		                      	b=b-1; 
 		                      }
 				 }
@@ -163,7 +202,7 @@ public class Vezir extends Tas {
 			     
 			     if(girdi!=true && koordinat.getsonY()==koordinat.getbasY() && koordinat.getbasX() < koordinat.getsonX())
 				 {
-			          while(girdi!=true &&  (tahta.tahta[a][b+1]==' ' || Character.isLowerCase(tahta.tahta[a][b+1])!=true || (koordinat.getsonX()==b+1 && koordinat.getsonY()==a )))
+			          while(girdi!=true &&  (tahta.tahta[a][b+1]==' ' || Character.isLowerCase(tahta.tahta[a][b+1])!=true ))
 		                   {
 		        	           if(koordinat.getsonX()==b+1 && koordinat.getsonY()==a && Character.isLowerCase(tahta.tahta[a][b+1])==false)
 		        	               {
@@ -172,11 +211,16 @@ public class Vezir extends Tas {
 		        	                   girdi=true;
 		        		               break;
 		        	               } 
+		        	           else if(Character.isLowerCase(tahta.tahta[a][b+1])==true || Character.isUpperCase(tahta.tahta[a][b+1])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	             b=b+1; 
 	     	                }
 				 }
 			     
-		            tahta.yazdir(); System.out.println();	
+			     System.out.println();	 //tahta.yazdir(); System.out.println();	
 			
 		}
 	
@@ -185,7 +229,7 @@ public class Vezir extends Tas {
 			  
 			if(koordinat.getsonY() < koordinat.getbasY() && koordinat.getbasX() < koordinat.getsonX()) //burda sað yukarý çapraz gittiðini anlýyor.
 			{
-			     while(tahta.tahta[a-1][b+1]==' ' || Character.isUpperCase(tahta.tahta[a-1][b+1])!=true || (koordinat.getsonX()==b+1 && koordinat.getsonY()==a-1) ) //burda da gitmek istediði yere kadar kontrol ediyor çünkü taþlarýn üstünden atlayamaz
+			     while(tahta.tahta[a-1][b+1]==' ' || Character.isUpperCase(tahta.tahta[a-1][b+1])!=true  ) //burda da gitmek istediði yere kadar kontrol ediyor çünkü taþlarýn üstünden atlayamaz
 		              {
 		        	      if(koordinat.getsonX()==b+1 && koordinat.getsonY()==a-1 && Character.isUpperCase(tahta.tahta[a-1][b])==false)
 		        	            {
@@ -194,6 +238,11 @@ public class Vezir extends Tas {
 		        		            girdi=true;
 		        		            break;
 		        	            }
+		        	      else if(Character.isLowerCase(tahta.tahta[a-1][b+1])==true || Character.isUpperCase(tahta.tahta[a-1][b+1])==true)
+		        	      {
+		        	    	  break;
+		        	      }
+		        	      
 		        	
 		        	    a=a-1; 	b=b+1;	        	 
    		              }
@@ -207,7 +256,7 @@ public class Vezir extends Tas {
 		     
 		     if(girdi!=true && koordinat.getsonY() < koordinat.getbasY() && koordinat.getbasX() > koordinat.getsonX())
 			 {
-		         while(tahta.tahta[a-1][b-1]==' ' || Character.isUpperCase(tahta.tahta[a-1][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a-1))
+		         while(tahta.tahta[a-1][b-1]==' ' || Character.isUpperCase(tahta.tahta[a-1][b-1])!=true )
 		              {
 		        	   
 		        	      if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a-1 && Character.isUpperCase(tahta.tahta[a-1][b+1])==false)
@@ -217,6 +266,11 @@ public class Vezir extends Tas {
 		        		            girdi=true;
 		        		            break;
 		                   	   }
+		        	      else if(Character.isLowerCase(tahta.tahta[a-1][b-1])==true || Character.isUpperCase(tahta.tahta[a-1][b-1])==true)
+		        	      {
+		        	    	  break;
+		        	      }
+		        	      
 		        	 
 		        	 a=a-1;  b=b-1;     	 
 		        	 
@@ -230,7 +284,7 @@ public class Vezir extends Tas {
 		        
 		        if(girdi!=true && koordinat.getsonY() > koordinat.getbasY() && koordinat.getbasX() > koordinat.getsonX())
 				{  		         
-		             while(girdi!=true && (tahta.tahta[a+1][b-1]==' ' || Character.isUpperCase(tahta.tahta[a+1][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a+1)))
+		             while(girdi!=true && (tahta.tahta[a+1][b-1]==' ' || Character.isUpperCase(tahta.tahta[a+1][b-1])!=true ))
 		                  {
 		        	          if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a+1 && Character.isUpperCase(tahta.tahta[a+1][b-1])==false)
 		        	                {
@@ -239,6 +293,11 @@ public class Vezir extends Tas {
 		        		                 girdi=true;
 		        	                  	 break;
 		        	                }
+		        	          else if(Character.isLowerCase(tahta.tahta[a+1][b-1])==true || Character.isUpperCase(tahta.tahta[a+1][b-1])==true)
+			        	      {
+			        	    	  break;
+			        	      }
+			        	      
 		        	 a=a+1;  b=b-1;
 		        	 
 		                  }
@@ -251,7 +310,7 @@ public class Vezir extends Tas {
 		        
 		       if(girdi!=true && koordinat.getsonY() > koordinat.getbasY() && koordinat.getbasX() < koordinat.getsonX())
 			   {
-		             while(girdi!=true && (tahta.tahta[a+1][b+1]==' ' || Character.isUpperCase(tahta.tahta[a+1][b+1])!=true || (koordinat.getsonX()==b+1 && koordinat.getsonY()==a+1)))
+		             while(girdi!=true && (tahta.tahta[a+1][b+1]==' ' || Character.isUpperCase(tahta.tahta[a+1][b+1])!=true ))
 		                  {
 		        	 
 		                    	 if(koordinat.getsonX()==b+1 && koordinat.getsonY()==a+1 && Character.isUpperCase(tahta.tahta[a+1][b+1])==false) 
@@ -261,6 +320,11 @@ public class Vezir extends Tas {
 	        		                      girdi=true;
 	        		                      break;
 		        	                  }
+		                    	 else if(Character.isLowerCase(tahta.tahta[a+1][b+1])==true || Character.isUpperCase(tahta.tahta[a+1][b+1])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	     a=a+1; b=b+1;
 		                  }
 			   }
@@ -272,7 +336,7 @@ public class Vezir extends Tas {
 		         
 			     if( girdi!=true && koordinat.getsonY() < koordinat.getbasY() && koordinat.getbasX()==koordinat.getsonX())
 				 {
-		               while(girdi!=true &&  (tahta.tahta[a-1][b]==' ' ||  Character.isUpperCase(tahta.tahta[a-1][b])!=true || (koordinat.getsonX()==b && koordinat.getsonY()==a-1 )))
+		               while(girdi!=true &&  (tahta.tahta[a-1][b]==' ' ||  Character.isUpperCase(tahta.tahta[a-1][b])!=true ))
 		                     {
 		        	              if(koordinat.getsonX()==b && koordinat.getsonY()==a-1 && Character.isUpperCase(tahta.tahta[a-1][b-1])==false)
 		        	                    {
@@ -281,6 +345,11 @@ public class Vezir extends Tas {
 		        		                    girdi=true;
 		        		                    break; 
 		        	                    } 
+		        	              else if(Character.isLowerCase(tahta.tahta[a-1][b])==true || Character.isUpperCase(tahta.tahta[a-1][b])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	             a=a-1; 
 		                     }
 				 }
@@ -292,7 +361,7 @@ public class Vezir extends Tas {
 			     
 			     if(girdi!=true && koordinat.getsonY() > koordinat.getbasY() && koordinat.getbasX()==koordinat.getsonX())
 				 {
-			            while(girdi!=true &&  (tahta.tahta[a+1][b]==' ' || Character.isUpperCase(tahta.tahta[a+1][b])!=true || (koordinat.getsonX()==b && koordinat.getsonY()==a+1 )))
+			            while(girdi!=true &&  (tahta.tahta[a+1][b]==' ' || Character.isUpperCase(tahta.tahta[a+1][b])!=true ))
 		                      {
 		        	             if(koordinat.getsonX()==b && koordinat.getsonY()==a+1 && Character.isUpperCase(tahta.tahta[a+1][b])==false)
 		        	                  {
@@ -301,6 +370,11 @@ public class Vezir extends Tas {
 		        		                  girdi=true;
 		        		                  break;
 		        	                   } 
+		        	             else if(Character.isLowerCase(tahta.tahta[a+1][b])==true || Character.isUpperCase(tahta.tahta[a+1][b])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	            a=a+1; 
 		                    }
 				 }
@@ -312,7 +386,7 @@ public class Vezir extends Tas {
 			     
 			     if(girdi!=true && koordinat.getsonY()==koordinat.getbasY() && koordinat.getbasX() > koordinat.getsonX())
 				 {
-			           while(girdi!=true &&  (tahta.tahta[a][b-1]==' ' || Character.isUpperCase(tahta.tahta[a][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a )))
+			           while(girdi!=true &&  (tahta.tahta[a][b-1]==' ' || Character.isUpperCase(tahta.tahta[a][b-1])!=true ))
 		                      {
 		        	             if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a && Character.isUpperCase(tahta.tahta[a][b-1])==false)
 		        	                  {
@@ -321,6 +395,12 @@ public class Vezir extends Tas {
 		        		                  girdi=true;
 		        		                  break;
 		        	                   }
+		        	             
+		        	             else if(Character.isLowerCase(tahta.tahta[a][b-1])==true || Character.isUpperCase(tahta.tahta[a][b-1])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		                      	b=b-1; 
 		                      }
 				 }
@@ -332,7 +412,7 @@ public class Vezir extends Tas {
 			     
 			     if(girdi!=true && koordinat.getsonY()==koordinat.getbasY() && koordinat.getbasX() < koordinat.getsonX())
 				 {
-			          while(girdi!=true &&  (tahta.tahta[a][b+1]==' ' || Character.isUpperCase(tahta.tahta[a][b+1])!=true || (koordinat.getsonX()==b+1 && koordinat.getsonY()==a )))
+			          while(girdi!=true &&  (tahta.tahta[a][b+1]==' ' || Character.isUpperCase(tahta.tahta[a][b+1])!=true ))
 		                   {
 		        	           if(koordinat.getsonX()==b+1 && koordinat.getsonY()==a && Character.isUpperCase(tahta.tahta[a][b+1])==false)
 		        	               {
@@ -341,11 +421,16 @@ public class Vezir extends Tas {
 		        	                   girdi=true;
 		        		               break;
 		        	               } 
+		        	           else if(Character.isLowerCase(tahta.tahta[a][b+1])==true || Character.isUpperCase(tahta.tahta[a][b+1])==true)
+				        	      {
+				        	    	  break;
+				        	      }
+				        	      
 		        	             b=b+1; 
 	     	                }
 				 }
 			     
-		            tahta.yazdir(); System.out.println();	
+			     System.out.println();   //tahta.yazdir(); System.out.println();	
 			
 		}
 			
