@@ -44,13 +44,7 @@ public class Oyuncu {
 		{
 			//tahta.yerlestir(new Sah(),koord,kendi_rengi,yedigi_renk,tahta);
 		}
-		else 
-		{
-			
-			
-			
-			System.out.println("Boþ karenin koordinatlarýný girdiniz!!");
-		}
+		
 		
 	}
 	
