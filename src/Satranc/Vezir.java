@@ -11,6 +11,8 @@ public class Vezir extends Tas {
 		int b=koordinat.getbasX();
 		boolean girdi=false; 
 		boolean yanlis_koordinat=false;
+		boolean tehdit=false;
+		int c,d;
 		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='v') //beyazýn vezir taþý
 		{
@@ -224,7 +226,145 @@ public class Vezir extends Tas {
 			     System.out.println();	 
 			
 		}
+		
+		if(girdi==true && Character.isLowerCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
+		{
+			tehdit=false;
+			c=koordinat.getsonY();
+			d=koordinat.getsonX();
+			
+			while(c-1>0 && tehdit==false && (tahta.tahta[c-1][d]==' ' || Character.isLowerCase(tahta.tahta[c-1][d])!=true))
+            {
+
+                if(tahta.tahta[c-1][d]=='Þ')
+                     {
+                       System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+                       tehdit=true;
+                        break;
+                     }
+  	           c=c-1;
+            }
+			
+			c=koordinat.getsonY();
+			d=koordinat.getsonX();
+			
+			 while(c+1<7 && tehdit==false && (tahta.tahta[c+1][d]==' ' || Character.isLowerCase(tahta.tahta[c+1][d])!=true))
+             {
+	   
+                	if(tahta.tahta[c+1][d]=='Þ')
+	                    {
+		                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+		                   tehdit=true;
+		                   break;
+	                    }
 	
+  	         c=c+1;
+             }
+			
+			 c=koordinat.getsonY();
+		     d=koordinat.getsonX();
+				
+				 while(d-1>0 && tehdit==false && (tahta.tahta[c][d-1]==' ' || Character.isLowerCase(tahta.tahta[c][d-1])!=true) )
+	             {
+		   
+	                	if(tahta.tahta[c][d-1]=='Þ')
+		                    {
+			                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+			                   tehdit=true;
+			                   break;
+		                    }
+		
+	  	         d-=1;
+	             }
+				 
+			  c=koordinat.getsonY();
+			  d=koordinat.getsonX();
+					
+					 while(d+1<7  && tehdit==false && (tahta.tahta[c][d+1]==' ' || Character.isLowerCase(tahta.tahta[c][d+1])!=true))
+		             {
+			   
+		                	if(tahta.tahta[c][d+1]=='Þ')
+			                    {
+				                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+				                   tehdit=true;
+				                   break;
+			                    }
+			
+		  	        d+=1;
+		             } 	
+					 
+					 c=koordinat.getsonY();
+						d=koordinat.getsonX();
+						
+						//sol yukarý çapraz
+						while(c-1>0 && d-1>0 && tehdit==false && (tahta.tahta[c-1][d-1]==' ' || Character.isLowerCase(tahta.tahta[c-1][d-1])!=true ))
+				        {
+					        if(tahta.tahta[c-1][d-1]=='Þ')
+					            {
+						             System.out.println("Beyaz taþlý oyuncu þahýnýzý tehdit ediyor");
+						             tehdit=true;
+			    		              break;
+					            }
+					
+				          	c-=1;  d-=1;
+					
+			            }
+						//sað yukarý çapraz
+						c=koordinat.getsonY();
+						d=koordinat.getsonX();
+						
+						 while(c-1>0 && d+1<7 && tehdit==false && (tahta.tahta[c-1][d+1]==' ' || Character.isLowerCase(tahta.tahta[c-1][d+1])!=true))
+			             {
+				   
+			                	if(tahta.tahta[c-1][d+1]=='Þ')
+				                    {
+					                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+					                   tehdit=true;
+					                   break;
+				                    }
+				
+			  	         c-=1; d+=1;
+			             }
+						    //sol aþaðý çapraz
+						    c=koordinat.getsonY();
+							d=koordinat.getsonX();
+							
+							 while(c+1<7 && d-1>0 && tehdit==false && (tahta.tahta[c+1][d-1]==' ' || Character.isLowerCase(tahta.tahta[c+1][d-1])!=true))
+				             {
+					   
+				                	if(tahta.tahta[c+1][d-1]=='Þ')
+					                    {
+						                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+						                   tehdit=true;
+						                   break;
+					                    }
+					
+				  	         c+=1; d-=1;
+				             }
+							 
+							 //sað aþaðý çapraz
+							 
+							c=koordinat.getsonY();
+							d=koordinat.getsonX();
+								
+							 while(c+1<7 && d+1<7 && tehdit==false && (tahta.tahta[c+1][d+1]==' ' || Character.isLowerCase(tahta.tahta[c+1][d+1])!=true))
+					             {
+						   
+					                	if(tahta.tahta[c+1][d+1]=='Þ')
+						                    {
+							                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+							                   tehdit=true;
+							                   break;
+						                    }
+						
+					  	         c+=1; d+=1;
+					             }	 	
+		
+		}
+		
+		
+		
+		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='V') //beyazýn vezir taþý
 		{
 			  
@@ -432,6 +572,143 @@ public class Vezir extends Tas {
 				 }  
 			
 		}
+		
+        tehdit=false;
+		
+		if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
+		{
+			c=koordinat.getsonY();
+			d=koordinat.getsonX();
+			
+			while(c-1>0 && tehdit==false && (tahta.tahta[c-1][d]==' ' || Character.isUpperCase(tahta.tahta[c-1][d])!=true) )
+            {
+
+                if(tahta.tahta[c-1][d]=='þ')
+                     {
+                       System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
+                       tehdit=true;
+                        break;
+                     }
+  	           c=c-1;
+            }
+			
+			c=koordinat.getsonY();
+			d=koordinat.getsonX();
+			
+			 while(c+1<7 && tehdit==false && (tahta.tahta[c+1][d]==' ' || Character.isUpperCase(tahta.tahta[c+1][d])!=true))
+             {
+	   
+                	if(tahta.tahta[c+1][d]=='þ')
+	                    {
+		                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
+		                   tehdit=true;
+		                   break;
+	                    }
+	
+  	         c=c+1;
+             }
+			
+			 c=koordinat.getsonY();
+		     d=koordinat.getsonX();
+			
+				 while(d-1>0 && tehdit==false && (tahta.tahta[c][d-1]==' ' || Character.isUpperCase(tahta.tahta[c][d-1])!=true))
+	             {
+		   
+	                	if(tahta.tahta[c][d-1]=='þ')
+		                    {
+			                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
+			                   tehdit=true;
+			                   break;
+		                    }
+		
+	  	         d-=1;
+	             }
+				 
+			  c=koordinat.getsonY();
+			  d=koordinat.getsonX();
+					
+					 while(d+1<7 && tehdit==false && (tahta.tahta[c][d+1]==' ' || Character.isUpperCase(tahta.tahta[c][d+1])!=true))
+		             {
+			   
+		                	if(tahta.tahta[c][d+1]=='þ')
+			                    {
+				                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
+				                   tehdit=true;
+				                   break;
+			                    }
+			
+		  	        d+=1;
+		             } 	
+					 
+					 c=koordinat.getsonY();
+						d=koordinat.getsonX();
+						
+						//sol yukarý çapraz
+						while(c-1>0 && d-1>0 && tehdit==false && (tahta.tahta[c-1][d-1]==' ' || Character.isUpperCase(tahta.tahta[c-1][d-1])!=true ))
+				        {
+					        if(tahta.tahta[c-1][d-1]=='þ')
+					            {
+						             System.out.println("Siyah taþlý oyuncu þahýnýzý tehdit ediyor");
+						             tehdit=true;
+			    		              break;
+					            }
+					
+				          	c-=1;  d-=1;
+					
+			            }
+						//sað yukarý çapraz
+						c=koordinat.getsonY();
+						d=koordinat.getsonX();
+						
+						 while(c-1>0 && d+1<7 && tehdit==false && (tahta.tahta[c-1][d+1]==' ' || Character.isUpperCase(tahta.tahta[c-1][d+1])!=true))
+			             {
+				   
+			                	if(tahta.tahta[c-1][d+1]=='þ')
+				                    {
+					                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
+					                   tehdit=true;
+					                   break;
+				                    }
+				
+			  	         c-=1; d+=1;
+			             }
+						    //sol aþaðý çapraz
+						    c=koordinat.getsonY();
+							d=koordinat.getsonX();
+							
+							 while(c+1<7 && d-1>0 && tehdit==false && (tahta.tahta[c+1][d-1]==' ' || Character.isUpperCase(tahta.tahta[c+1][d-1])!=true))
+				             {
+					   
+				                	if(tahta.tahta[c+1][d-1]=='þ')
+					                    {
+						                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
+						                   tehdit=true;
+						                   break;
+					                    }
+					
+				  	         c+=1; d-=1;
+				             }
+							 
+							 //sað aþaðý çapraz
+							 
+							c=koordinat.getsonY();
+							d=koordinat.getsonX();
+								
+							 while(c+1<7 && d+1<7 && tehdit==false && (tahta.tahta[c+1][d+1]==' ' || Character.isUpperCase(tahta.tahta[c+1][d+1])!=true))
+					             {
+						   
+					                	if(tahta.tahta[c+1][d+1]=='þ')
+						                    {
+							                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+							                   tehdit=true;
+							                   break;
+						                    }
+						
+					  	         c+=1; d+=1;
+					             }	 	
+						 		
+		}
+		
 		
 		if(girdi==false) yanlis_koordinat=true;
 		
