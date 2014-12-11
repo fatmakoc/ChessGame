@@ -16,7 +16,7 @@ public class Piyon extends Tas {
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'p'){
 			//tek kare oynatma
 			if(xFark == 0 && yFark == 1 && (Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true 
-					|| tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]==' ')){
+					|| tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]!=' ')){
 				
 				Degistir = 1;
 				
@@ -40,10 +40,10 @@ public class Piyon extends Tas {
 		}	
 		
 		//2.oyuncu için
-		if( Degistir!=1 && tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'P'){
+		if( tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'P'){
 			//tek kare oynatma
 			if(xFark == 0 && yFark == -1 && (Character.isLowerCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true 
-					|| tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]==' ')){
+					|| tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]!=' ')){
 				Degistir = 2;
 				
 			}
