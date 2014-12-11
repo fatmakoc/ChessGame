@@ -25,7 +25,7 @@ public class Sah extends Tas{
 				}
 				
 				//oynanacak pozisyonda taþ varsa ve yiyebileceði taþlar varsa 
-				else if((tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] != ' ' ) || ((tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='P') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='K') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='A') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='F') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='V')))
+				else if((Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true  ))
 				{
 					Degistir = 1;
 					
@@ -47,7 +47,7 @@ public class Sah extends Tas{
 					Degistir = 2;
 				}
 				//oynanacak pozisyonda taþ varsa ve yiyebileceði taþlar varsa 
-				else if((tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] != ' ' ) && ((tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] =='p') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] =='k') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] =='a') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == 'f') || (tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] =='v')))
+				else if(Character.isLowerCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
 				{
 					Degistir = 2;
 				}
