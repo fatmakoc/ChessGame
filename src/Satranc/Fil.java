@@ -3,13 +3,13 @@ package Satranc;
 public class Fil extends Tas{
 
 	
-	public void hamleYap(Koordinat koordinat,Tahta tahta) {
+	public boolean hamleYap(Koordinat koordinat,Tahta tahta) {
 		
 
 		int a=koordinat.getbasY();   
 		int b=koordinat.getbasX();
 		boolean girdi=false; 
-		
+		boolean yanlis_koordinat=false;
 		
 		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='f')  //beyaz oyuncu oynuyorsa
@@ -20,7 +20,7 @@ public class Fil extends Tas{
 		
 		if(koordinat.getsonX() < koordinat.getbasX() && koordinat.getbasY() > koordinat.getsonY())
 		{	
-			//boþþa veyaz kendi taþýndan farklý bir taþsa
+			//boþþa ve kendi taþýndan farklý bir taþsa
 		       while(tahta.tahta[a-1][b-1]==' ' || Character.isLowerCase(tahta.tahta[a-1][b-1])!=true || (koordinat.getsonX()==b-1 && koordinat.getsonY()==a-1 ))
 		        {
 			        if(koordinat.getsonX()==b-1 && koordinat.getsonY()==a-1 && Character.isLowerCase(tahta.tahta[a-1][b-1])==false)
@@ -198,8 +198,10 @@ public class Fil extends Tas{
 	
 		}
 		
-		System.out.println();	
+		if(girdi==false) yanlis_koordinat=true;
 		
+		System.out.println();	
+		return yanlis_koordinat;
 		
 	}
 

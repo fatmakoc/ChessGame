@@ -3,13 +3,14 @@ package Satranc;
 public class Vezir extends Tas {
 
 	
-	public void hamleYap(Koordinat koordinat,Tahta tahta) {
+	public boolean hamleYap(Koordinat koordinat,Tahta tahta) {
 		
 		
 
 		int a=koordinat.getbasY();
 		int b=koordinat.getbasX();
 		boolean girdi=false; 
+		boolean yanlis_koordinat=false;
 		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='v') //beyazýn vezir taþý
 		{
@@ -428,12 +429,14 @@ public class Vezir extends Tas {
 				        	      
 		        	             b=b+1; 
 	     	                }
-				 }
-			     
-			     System.out.println();   
+				 }  
 			
 		}
-			
+		
+		if(girdi==false) yanlis_koordinat=true;
+		
+		System.out.println();
+		return yanlis_koordinat;
 		
 		
 	}

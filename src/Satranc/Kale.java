@@ -3,11 +3,12 @@ package Satranc;
 public class Kale extends Tas{
 
 	
-	public void hamleYap(Koordinat koordinat,Tahta tahta) {
+	public boolean hamleYap(Koordinat koordinat,Tahta tahta) {
 	
 		int a=koordinat.getbasY();
 		int b=koordinat.getbasX();
 		boolean girdi=false; 
+		boolean yanlis_koordinat=false;
 		
 		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='k') //beyazýn kale taþý
 		{
@@ -188,9 +189,14 @@ public class Kale extends Tas{
 						
 					       }
 					}
-					System.out.println();	 
+					
+				
 			}
+		   
+		    if(girdi==false) yanlis_koordinat=true;
 		 
+			System.out.println();
+			return yanlis_koordinat;
 		  
 		 
 		 

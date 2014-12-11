@@ -3,12 +3,12 @@ package Satranc;
 public class Sah extends Tas{
 
 	
-	public void hamleYap(Koordinat koordinat,Tahta tahta) {
+	public boolean hamleYap(Koordinat koordinat,Tahta tahta) {
 		
 		
 		int xFark =(koordinat.getbasX() - koordinat.getsonX());
 		int yFark = (koordinat.getbasY() - koordinat.getsonY());
-		
+		boolean yanlis_koordinat=false;
 		int Degistir = 0;
 		
 		//1.oyuncu için
@@ -55,6 +55,8 @@ public class Sah extends Tas{
 				
 		}
 		
+		if(Degistir==0)  yanlis_koordinat=true;
+		
 		if(Degistir == 1)
 		{
 			tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=' ';
@@ -67,6 +69,8 @@ public class Sah extends Tas{
 		
 		}
 		
+		System.out.println();
+		return yanlis_koordinat;
 		
 	}
 

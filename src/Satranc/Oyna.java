@@ -28,15 +28,25 @@ public class Oyna {
 	    	System.out.println("Götürmek istediðiniz x koordinatý?"); koordinat.setsonX(new Scanner(System.in).nextByte());
 	    	System.out.println("Götürmek istediðiniz y koordinatý ?"); koordinat.setsonY(new Scanner(System.in).nextByte());
 			
-	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0') 
+	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0' )   
 	    		{ hata1=true;  System.out.println("Hatalý koordinat seçimi"); System.out.println(); }
 	    	
 	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
 	    	  {
-	    		hata1=false; beyaz.koordinatiAl(koordinat);     beyaz.tahtayiAl(tahta);       beyaz.tahtayaGonder();  
-	    	  }
+	    		hata1=false; 
+	    		beyaz.koordinatiAl(koordinat);    
+	    		beyaz.tahtayiAl(tahta);      
 	    		
-			} 
+	    		   if(beyaz.tahtayaGonder()) 
+	    		      {
+	    			    System.out.println("hatalý koordinat giriyorsunuz "); 
+	    			    hata1=true;  
+	    		      }
+	    	  }
+	    	
+	      }
+	    		
+			
 			
 
 			 
@@ -52,23 +62,29 @@ public class Oyna {
 		    	System.out.println("Götürmek istediðiniz x koordinatý?"); koordinat.setsonX(new Scanner(System.in).nextByte());
 		    	System.out.println("Götürmek istediðiniz y koordinatý ?"); koordinat.setsonY(new Scanner(System.in).nextByte());
 	    	  	
-	    		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0')
+	    		     if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0')
 	    		     { hata2=true;   System.out.println("Hatalý koordinat"); System.out.println();}
 	    		
-	    		if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
-		    	  {
-		    		hata2=false;   beyaz.koordinatiAl(koordinat);     beyaz.tahtayiAl(tahta);       beyaz.tahtayaGonder();   tahta.yazdir();
-		    	  }
+	    		      if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
+		    	          {
+		    		        hata2=false; 
+		    		        siyah.koordinatiAl(koordinat);  
+		    		        siyah.tahtayiAl(tahta);     
+		    		
+		    		             if(siyah.tahtayaGonder())
+		    		                {
+		    			                System.out.println("hatalý koordinat giriyorsunuz "); 
+		    		                    hata2=true; //yanlýþ koordinat girmiþse 
+		    		                }
+		    		
+		    	          }
 	 
 	    		
-	    	}
+	    	 }
 	    	
-	    	
-			
 	    	 
 		}
 	
 		
 	}
-
 }

@@ -36,9 +36,10 @@ public class Tahta {
 	
 	
 	
-	public void yerlestir(Tas tas, Koordinat koordinat, Tahta tahta)
+	public boolean yerlestir(Tas tas, Koordinat koordinat, Tahta tahta)
 	{
-		tas.hamleYap(koordinat,tahta);
+		boolean yanlis_koordinat=tas.hamleYap(koordinat,tahta);
+		return yanlis_koordinat;
 	}
 	
 
