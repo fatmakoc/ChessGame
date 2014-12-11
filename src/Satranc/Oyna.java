@@ -22,7 +22,7 @@ public class Oyna {
 		while(true)
 		{
 
-			if(hata2!=true)  
+			if(hata2!=true && hata2_1!=true && hata2_2!=true )  
 			{
 
 		    tahta.yazdir(); System.out.println();
@@ -37,8 +37,9 @@ public class Oyna {
 	    	else 
 	    		hata1=false;
 	    	
-	    	if(Character.isUpperCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true)
-	    	    hata1_1=true;
+	    	if(Character.isUpperCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true){
+	    	    hata1_1=true;  System.out.println("Hatalý seçim! Rakip taþý oynayamazsýnýz");
+	    	}
 	    	else 
 	    		hata1_1=false;
 	    	
@@ -83,8 +84,10 @@ public class Oyna {
 	    		     else
 	    		    	 hata2=false;
 	    		
-	    		     if(Character.isLowerCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true)
-	    		    	    hata2_1=true;
+	    		     if(Character.isLowerCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true){
+	    		    	 hata2_1=true;  System.out.println("Hatalý seçim! Rakip taþý oynayamazsýnýz ");
+	    		     }
+	    		    	    
 	    		    	else if(Character.isUpperCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true)
 	    		    		hata2_1=false;
 	    		     
