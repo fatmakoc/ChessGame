@@ -28,10 +28,11 @@ public class Oyna {
 	    	System.out.println("Götürmek istediðiniz x koordinatý?"); koordinat.setsonX(new Scanner(System.in).nextByte());
 	    	System.out.println("Götürmek istediðiniz y koordinatý ?"); koordinat.setsonY(new Scanner(System.in).nextByte());
 			
-	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0' )   
+	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0'
+	    			|| Character.isUpperCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true)  //boþ koordiinat veya rakip taþý seçme durumunda 
 	    		{ hata1=true;  System.out.println("Hatalý koordinat seçimi"); System.out.println(); }
 	    	
-	    	if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
+	    	if(hata1!=true && tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
 	    	  {
 	    		hata1=false; 
 	    		beyaz.koordinatiAl(koordinat);    
@@ -62,10 +63,11 @@ public class Oyna {
 		    	System.out.println("Götürmek istediðiniz x koordinatý?"); koordinat.setsonX(new Scanner(System.in).nextByte());
 		    	System.out.println("Götürmek istediðiniz y koordinatý ?"); koordinat.setsonY(new Scanner(System.in).nextByte());
 	    	  	
-	    		     if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0')
+	    		     if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=='\0' 
+	    		    		 || Character.isLowerCase(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()])==true)
 	    		     { hata2=true;   System.out.println("Hatalý koordinat"); System.out.println();}
 	    		
-	    		      if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
+	    		      if(hata2!=true && tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]!='\0')
 		    	          {
 		    		        hata2=false; 
 		    		        siyah.koordinatiAl(koordinat);  
