@@ -18,7 +18,7 @@ public class Sah extends Tas{
 			if((xFark == 0 && yFark == 1) || (xFark == 1 && yFark == 1) || (xFark == 1 && yFark == 0) || (xFark == 1 && yFark == -1) || (xFark == 0 && yFark == -1) || (xFark == -1 && yFark == -1) || (xFark == -1 && yFark == 0) || (xFark == -1 && yFark == 1))
 			{
 				
-				if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] == ' ')
+				if(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] != ' ')
 				{
 					Degistir = 1;
 					
@@ -42,7 +42,7 @@ public class Sah extends Tas{
 			//þahýn oynama durumlarý
 			if((xFark == 0 && yFark == 1)|| (xFark == 1 && yFark == 1) || (xFark == 1 && yFark == 0) || (xFark == 1 && yFark == -1) || (xFark == 0 && yFark == -1) || (xFark == -1 && yFark == -1) || (xFark == -1 && yFark == 0) || (xFark == -1 && yFark == 1) )
 			{
-				if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] == ' ')
+				if(tahta.tahta[koordinat.getbasY()][koordinat.getbasX()] != ' ')
 				{
 					Degistir = 2;
 				}
