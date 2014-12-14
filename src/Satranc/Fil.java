@@ -271,10 +271,11 @@ public class Fil extends Tas{
 
 		}
 		
-		tehdit=false;
+	
 		
 		if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]))
 		{
+			tehdit=false;
 			c=koordinat.getsonY();
 			d=koordinat.getsonX();
 			
@@ -295,12 +296,12 @@ public class Fil extends Tas{
 			c=koordinat.getsonY();
 			d=koordinat.getsonX();
 			
-			 while(c-1>0 && d+1<7 && tehdit==false && (tahta.tahta[c-1][d+1]==' ' || Character.isLowerCase(tahta.tahta[c-1][d+1])!=true))
+			 while(c-1>0 && d+1<7 && tehdit==false && (tahta.tahta[c-1][d+1]==' ' || Character.isUpperCase(tahta.tahta[c-1][d+1])!=true))
              {
 	   
-                	if(tahta.tahta[c-1][d+1]=='Þ')
+                	if(tahta.tahta[c-1][d+1]=='þ')
 	                    {
-		                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+		                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
 		                   tehdit=true;
 		                   break;
 	                    }
@@ -311,12 +312,12 @@ public class Fil extends Tas{
 			    c=koordinat.getsonY();
 				d=koordinat.getsonX();
 				
-				 while(c+1<7 && d-1>0 && tehdit==false && (tahta.tahta[c+1][d-1]==' ' || Character.isLowerCase(tahta.tahta[c+1][d-1])!=true))
+				 while(c+1<7 && d-1>0 && tehdit==false && (tahta.tahta[c+1][d-1]==' ' || Character.isUpperCase(tahta.tahta[c+1][d-1])!=true))
 	             {
 		   
-	                	if(tahta.tahta[c+1][d-1]=='Þ')
+	                	if(tahta.tahta[c+1][d-1]=='þ')
 		                    {
-			                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+			                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
 			                   tehdit=true;
 			                   break;
 		                    }
@@ -329,12 +330,12 @@ public class Fil extends Tas{
 				c=koordinat.getsonY();
 				d=koordinat.getsonX();
 					
-				 while(c+1<7 && d+1<7 && tehdit==false && (tahta.tahta[c+1][d+1]==' ' || Character.isLowerCase(tahta.tahta[c+1][d+1])!=true))
+				 while(c+1<7 && d+1<7 && tehdit==false && (tahta.tahta[c+1][d+1]==' ' || Character.isUpperCase(tahta.tahta[c+1][d+1])!=true))
 		             {
 			   
-		                	if(tahta.tahta[c+1][d+1]=='Þ')
+		                	if(tahta.tahta[c+1][d+1]=='þ')
 			                    {
-				                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+				                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
 				                   tehdit=true;
 				                   break;
 			                    }

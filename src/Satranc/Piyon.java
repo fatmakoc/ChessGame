@@ -10,6 +10,7 @@ public class Piyon extends Tas {
 		int a,b;
 		boolean yanlis_koordinat=false;
 		int Degistir = 0;
+		boolean tehdit=false;
 		
 		//1.oyuncu için
 		
@@ -75,23 +76,40 @@ public class Piyon extends Tas {
 		
 		if(Degistir == 1)
 		{
+			tehdit=false;
 			tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=' ';
 			tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] = 'p';
 			
-			if((b>0 && a<7 && b<7 && a>0 ) && (tahta.tahta[koordinat.getsonY()-1][koordinat.getsonX()-1]=='Þ' || tahta.tahta[koordinat.getsonY()-1][koordinat.getsonX()+1]=='Þ'))
+			if(a-1>0 && b+1<7 && tahta.tahta[a-1][b+1]=='Þ')
+			{
+				tehdit=true;
+				System.out.println("Beyaz oyuncu þah çekti");
+			}
+			else if(a-1>0 && b-1>0 && tahta.tahta[a-1][b-1]=='Þ')
+			{
+				tehdit=true;
+				System.out.println("Beyaz oyuncu þah çekti");
+			}
 				
-		     		System.out.println("Beyaz oyuncu þah çekti. ");
-			
 			
 		}
 		else if(Degistir == 2)
 		{
+			tehdit=false;
 			tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=' ';
 			tahta.tahta[koordinat.getsonY()][koordinat.getsonX()] = 'P';
 			
-			if((b>0 && a<7 && b<7 && a>0 ) && (tahta.tahta[koordinat.getsonY()+1][koordinat.getsonX()-1]=='þ' || tahta.tahta[koordinat.getsonY()+1][koordinat.getsonX()+1]=='þ'))
-				
-	     		System.out.println("Siyah  oyuncu þah çekti. ");
+			if(a+1<7 && b+1>0 && tahta.tahta[a+1][b+1]=='þ')
+			{
+				tehdit=true;
+				System.out.println("Siyah oyuncu þah çekti");
+			}
+			else if(a+1<7 && b-1>0 && tahta.tahta[a+1][b-1]=='þ')
+			{
+				tehdit=true;
+				System.out.println("Siyah oyuncu þah çekti");
+			}
+	
 		}
 		
 	

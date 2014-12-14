@@ -573,10 +573,11 @@ public class Vezir extends Tas {
 			
 		}
 		
-        tehdit=false;
+  
 		
 		if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
-		{
+		{  
+			tehdit=false;
 			c=koordinat.getsonY();
 			d=koordinat.getsonX();
 			
@@ -699,7 +700,7 @@ public class Vezir extends Tas {
 						   
 					                	if(tahta.tahta[c+1][d+1]=='þ')
 						                    {
-							                   System.out.println("Beyaz taþlý oyuncu siyahý tehdit ediyor.");
+							                   System.out.println("Siyah taþlý oyuncu siyahý tehdit ediyor.");
 							                   tehdit=true;
 							                   break;
 						                    }

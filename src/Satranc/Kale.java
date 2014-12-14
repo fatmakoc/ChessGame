@@ -102,6 +102,8 @@ public class Kale extends Tas{
 				System.out.println();		
 		}
 		
+		//Þah çekme olayý
+		
 		if(girdi==true && Character.isLowerCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
 		{
 			tehdit=false;
@@ -264,11 +266,11 @@ public class Kale extends Tas{
 				
 			}
 		 
-		 tehdit=false;
+		 
 		 
 		 if(girdi==true && Character.isUpperCase(tahta.tahta[koordinat.getsonY()][koordinat.getsonX()])==true)
 			{
-			    
+			    tehdit=false;
 				c=koordinat.getsonY();
 				d=koordinat.getsonX();
 				

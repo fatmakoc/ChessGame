@@ -9,7 +9,8 @@ public class At extends Tas {
 		int yFark = Math.abs(koordinat.getbasY() - koordinat.getsonY());
 		boolean  yanlis_koordinat=false;
 		int Degistir = 0;
-		
+		boolean tehdit=false;
+		int a,b;
 		
 		//1.oyuncunun at için oynama durumlarý
 		
@@ -41,15 +42,10 @@ public class At extends Tas {
 		//1. ve 2.oyuncunun oynayabilme durumlarý
 		
 		if( Degistir==0) yanlis_koordinat=true;		 //þartlara uymamýþ deðiþmemiþ demekki hataalý
+			
+           a=koordinat.getsonY();
+	       b=koordinat.getsonX();
 		
-		int a=koordinat.getsonY()-2;
-		int b=koordinat.getsonX()-1;
-		int c=koordinat.getsonX()+1;
-		int d=koordinat.getsonX()+2;
-		int e=koordinat.getsonX()-2;
-		int f=koordinat.getsonY()-1;
-		int g=koordinat.getsonY()+1;
-		int h=koordinat.getsonY()+2;
 		
 		     if( Degistir == 1)
 		  {
@@ -57,11 +53,46 @@ public class At extends Tas {
         	  tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=' ';
 
 
-        	  if((a>=0 && a<=7 && b>= 0 && b<=7 && tahta.tahta[a][b]=='þ' ) || (b>=0 && b<=7 && h>=0 && h<=7 && tahta.tahta[h][b]=='þ') || (a>=0 && a<=7 && c>= 0 && c<= 7 && tahta.tahta[a][c]=='þ') || (f>=0 && f<=7 && d>= 0 && d<=7 && tahta.tahta[f][d]=='þ' )|| (f>=0 && f<=7 && e>=0 && e<=7 &&  tahta.tahta[f][e]=='þ') ||  (g>=0 && g<=7 && d>= 0 && d<=7 && tahta.tahta[g][d]=='þ') || (g>=0 && g<=7 && e>=0 && e<=7 && tahta.tahta[g][e]=='þ') ||(c>= 0 && c<= 7 && h>=0 && h<=7 && tahta.tahta[h][c]=='þ')) {  
-
-		     		System.out.println("Beyaz oyuncu þah çekti. ");
+        	    if(b+1<7 &&  a-2>0 && tehdit!=true && tahta.tahta[a-2][b+1]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
         	    }
-			
+        	    else if(b-1>0 && a-2>0 && tehdit!=true && tahta.tahta[a-2][b-1]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }
+        	    else if(b+2<7 && a-1>0 && tehdit!=true && tahta.tahta[a-1][b+2]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }
+        	    else if(b+2<7 && a+1<7 && tehdit!=true && tahta.tahta[a+1][b+2]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }
+        	    else if(b+1<7 && a+2<7 && tehdit!=true && tahta.tahta[a+2][b+1]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }
+        	    else if(b-1>0 && a+2<7 && tehdit!=true && tahta.tahta[a+2][b-1]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }
+        	    else if(b-2>0 && a+1<7 && tehdit!=true && tahta.tahta[a+1][b-2]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }
+        	    else if(b-2>0 && a-1>0 && tehdit!=true && tahta.tahta[a-1][b-2]=='Þ')
+        	    {
+        	    	tehdit=true;
+        	    	System.out.println("Beyaz oyuncu þah çekti");
+        	    }		
 		  
 		  } 
 		
@@ -71,10 +102,48 @@ public class At extends Tas {
 			  tahta.tahta[koordinat.getsonY()][koordinat.getsonX()]='A';
         	  tahta.tahta[koordinat.getbasY()][koordinat.getbasX()]=' ';
         	  
-        	  if((a>=0 && a<=7 && b>= 0 && b<=7 && tahta.tahta[a][b]=='þ' ) || (b>=0 && b<=7 && h>=0 && h<=7 && tahta.tahta[h][b]=='þ') || (a>=0 && a<=7 && c>= 0 && c<= 7 && tahta.tahta[a][c]=='þ') || (f>=0 && f<=7 && d>= 0 && d<=7 && tahta.tahta[f][d]=='þ' )|| (f>=0 && f<=7 && e>=0 && e<=7 &&  tahta.tahta[f][e]=='þ') ||  (g>=0 && g<=7 && d>= 0 && d<=7 && tahta.tahta[g][d]=='þ') || (g>=0 && g<=7 && e>=0 && e<=7 && tahta.tahta[g][e]=='þ') ||(c>= 0 && c<= 7 && h>=0 && h<=7 && tahta.tahta[h][c]=='þ')) {  
+        	  
+        	  if(b+1<7 &&  a-2>0 && tehdit!=true && tahta.tahta[a-2][b+1]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b-1>0 && a-2>0 && tehdit!=true && tahta.tahta[a-2][b-1]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b+2<7 && a-1>0 && tehdit!=true && tahta.tahta[a-1][b+2]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b+2<7 && a+1<7 && tehdit!=true && tahta.tahta[a+1][b+2]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b+1<7 && a+2<7 && tehdit!=true && tahta.tahta[a+2][b+1]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b-1>0 && a+2<7 && tehdit!=true && tahta.tahta[a+2][b-1]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b-2>0 && a+1<7 && tehdit!=true && tahta.tahta[a+1][b-2]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }
+      	    else if(b-2>0 && a-1>0 && tehdit!=true && tahta.tahta[a-1][b-2]=='þ')
+      	    {
+      	    	tehdit=true;
+      	    	System.out.println("Siyah oyuncu þah çekti");
+      	    }	
 
-		     		System.out.println("Siyah oyuncu þah çekti. ");
-        	    }
         	  }
 		    
 		
